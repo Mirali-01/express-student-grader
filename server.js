@@ -29,6 +29,7 @@ app.get("/students/new", (req, res) => {
 
 // POST
 app.post("/students", (req, res) => {
+  // students.push(req.body);
   res.redirect("/students");
 });
 

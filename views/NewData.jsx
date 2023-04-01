@@ -8,7 +8,7 @@ export class NewData extends Component {
         <form action="/students" method="POST">
           <input type="text" name="name" placeholder="Enter Student Name" />
           <input type="text" name="grade" placeholder="Enter Student Grade" />
-          <input type="submit" value="Create Student Data" />
+          <input type="submit" name="" value="Create Student Data" />
         </form>
       </div>
     );
