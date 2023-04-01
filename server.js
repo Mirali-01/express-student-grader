@@ -27,6 +27,11 @@ app.get("/students/new", (req, res) => {
   res.render("NewData");
 });
 
+// POST
+app.post("/students", (req, res) => {
+  res.redirect("/students");
+});
+
 // Listening to PORT 300
 app.listen(PORT, () => {
   console.log(`Listening on PORT ${PORT}`);
