@@ -10,6 +10,16 @@ const students = require("./models/students");
 app.set("view engine", "jsx");
 app.engine("jsx", require("express-react-views").createEngine());
 
+// middleware - should be before your requests, controls the routes and flow of requests and responses
+// app.use() - called to every application
+app.use((req, res, next) => {
+  console.log("I run for all routes");
+  next();
+});
+
+// Viewing the body of the post request
+app.use(express.urlencoded({ extended: false }));
+
 // Get
 // app.get("/", (req, res) => {
 //   res.send("What's good!");

@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+const React = require("react");
 
-export class NewData extends Component {
+class NewData extends React.Component {
   render() {
     return (
       <div>
