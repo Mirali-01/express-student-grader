@@ -17,7 +17,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// Viewing the body of the post request
+// Viewing the body of the post request by accessing it's data and parsing it for posting to the req.body
 app.use(express.urlencoded({ extended: false }));
 
 // Get
@@ -39,7 +39,7 @@ app.get("/students/new", (req, res) => {
 
 // POST
 app.post("/students", (req, res) => {
-  // students.push(req.body);
+  students.push(req.body);
   res.redirect("/students");
 });
 
