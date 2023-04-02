@@ -11,13 +11,14 @@ app.set("view engine", "jsx");
 app.engine("jsx", require("express-react-views").createEngine());
 
 // middleware - should be before your requests, controls the routes and flow of requests and responses
-// app.use() - called to every application
+// app.use() - called to every route
 app.use((req, res, next) => {
   console.log("I run for all routes");
   next();
 });
 
-// Viewing the body of the post request by accessing it's data and parsing it for posting to the req.body
+// Viewing the body of the post request by accessing it's data and parsing it to a string (if extended: false) for posting to the req.body
+// querystring library (when false) or the qs library (when true) ?
 app.use(express.urlencoded({ extended: false }));
 
 // Get
